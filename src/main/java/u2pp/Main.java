@@ -3,14 +3,38 @@ package u2pp;
 import java.util.Scanner; //Allows you to use the Scanner objects
 
 /**
- * YOUR COMMENTS HERE
+ * Created Scanner and used system.in to take in the user's numbers
  */
 
 class Main {
   public static void main(String[] args) {
-    
-    //YOUR CODE HERE
-    
+
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Gimme the mpg: ");
+      Double anEfficiency = Double.parseDouble(sc.nextLine());
+      
+      System.out.println("Gimme the make of the car: ");
+      String carMake = sc.nextLine();
+      System.out.println("Make of car: " + carMake);
+      //String carModel = sc.nextLine();
+      System.out.println("Gimme the model of the car: ");
+      String carModel = sc.nextLine();
+      System.out.println("Model of car: " + carModel);
+	  Car bob = new Car(anEfficiency, carMake, carModel);
+      System.out.println("Gimme the gas in the car: ");
+      double gaser = sc.nextDouble();
+      bob.addGas(gaser);
+      System.out.println("Gas in car: " + gaser);
+      System.out.println("Gimme the distance driven in the car: ");
+      String distance = sc.nextLine();
+      System.out.println("Distance driven: " + distance);
+      double distancer = sc.nextDouble();
+      bob.drive(distancer);
+      System.out.println("Your " + carMake + " " + carModel + "has " + anEfficiency + "gallons of gas left in the tank");
+      
+	  sc.close();
+	  //Car(300, carMake, carModel);
+      
   }
   
   /**
@@ -24,7 +48,6 @@ class Main {
    * @return YOUR COMMENT HERE
    */
   public static String wordChanger(String word1, int start1, int end1, String word2, int start2, int end2) {
-    //YOUR CODE HERE
-    return "";
+    return word1 + "yes";
   }
 }
