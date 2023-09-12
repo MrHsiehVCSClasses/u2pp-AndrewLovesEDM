@@ -12,11 +12,9 @@ class Main {
       Scanner sc = new Scanner(System.in);
       System.out.println("Gimme the mpg: ");
       Double anEfficiency = Double.parseDouble(sc.nextLine());
-      
       System.out.println("Gimme the make of the car: ");
       String carMake = sc.nextLine();
       System.out.println("Make of car: " + carMake);
-      //String carModel = sc.nextLine();
       System.out.println("Gimme the model of the car: ");
       String carModel = sc.nextLine();
       System.out.println("Model of car: " + carModel);
@@ -25,16 +23,12 @@ class Main {
       double gaser = sc.nextDouble();
       bob.addGas(gaser);
       System.out.println("Gas in car: " + gaser);
-      System.out.println("Gimme the distance driven in the car: ");
       String distance = sc.nextLine();
       System.out.println("Distance driven: " + distance);
       double distancer = sc.nextDouble();
       bob.drive(distancer);
-      System.out.println("Your " + carMake + " " + carModel + "has " + anEfficiency + "gallons of gas left in the tank");
-      
+      System.out.println("Your " + carMake + " " + carModel + " " + "has " + anEfficiency + "gallons of gas left in the tank");
 	  sc.close();
-	  //Car(300, carMake, carModel);
-      
   }
   
   /**
@@ -48,6 +42,9 @@ class Main {
    * @return YOUR COMMENT HERE
    */
   public static String wordChanger(String word1, int start1, int end1, String word2, int start2, int end2) {
-    return word1 + "yes";
+	  String str1 = "Brian";
+	  String str2 = "Wade";
+	  String str3 = wordChanger(str1, 2, 3, str2, 0, 2);
+	  System.out.println(str3); //Will print out iaWad
   }
 }
